@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>college_servlet_jsp_program</display-name>
+ <!-- servlet declaration -->
+  
+  <!-- for first servlet declaration -->
+  <servlet>
+  <servlet-name>First </servlet-name>
+  <servlet-class>college_servlet_jsp_program.First_servlet</servlet-class>
+  </servlet>
+  
+  <!-- for second servlet declaration -->
+  <servlet>
+  <servlet-name>second </servlet-name>
+  <servlet-class>college_servlet_jsp_program.Second_servlet</servlet-class>
+  </servlet>
+  
+  <!-- for nice servlet declaration -->
+  <servlet>
+  <servlet-name>nice </servlet-name>
+  <servlet-class>college_servlet_jsp_program.nice</servlet-class>
+  </servlet>
+  
+  <!-- mapping -->
+  
+  <!-- mapping for first servlet  -->
+  <servlet-mapping>
+  <servlet-name>First</servlet-name>
+  <url-pattern>/web</url-pattern>
+  </servlet-mapping>
+  
+   <!-- mapping for nice servlet  -->
+  <servlet-mapping>
+  <servlet-name>nice</servlet-name>
+  <url-pattern>/onenice</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- mapping for second servlet  -->
+  <servlet-mapping>
+  <servlet-name>second</servlet-name>
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <!-- for nice servlet declaration -->
+  <servlet>
+  <servlet-name>simple_db </servlet-name>
+  <servlet-class>college_servlet_jsp_program.simple_registation</servlet-class>
+  </servlet>
+  <!-- mapping for second servlet  -->
+  <servlet-mapping>
+  <servlet-name>simple_db</servlet-name>
+  <url-pattern>/simple_login_db</url-pattern>
+  </servlet-mapping>
+  
+    <!-- for order error_of_servlet declaration -->
+  
+  <servlet>
+  <servlet-name>error </servlet-name>
+  <servlet-class>college_servlet_jsp_program.Error_of_filter</servlet-class>
+  </servlet>
+  
+  
+  <!-- mapping for second servlet  -->
+  <servlet-mapping>
+  <servlet-name>error</servlet-name>
+  <url-pattern>/loginError</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- for filter pack declaration -->
+  
+  
+  <servlet>
+  <servlet-name>order </servlet-name>
+  <servlet-class>filter_pack.order</servlet-class>
+  </servlet>
+  <!-- mapping for order servlet  -->
+  <servlet-mapping>
+  <servlet-name>order</servlet-name>
+  <url-pattern>/orderServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- for profile servlet declaration -->
+  <servlet>
+  <servlet-name>profile</servlet-name>
+  <servlet-class>filter_pack.profile</servlet-class>
+  </servlet>
+  <!-- mapping for profile servlet  -->
+  <servlet-mapping>
+  <servlet-name>profile</servlet-name>
+  <url-pattern>/profileServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- this is for filterboy  -->
+  <filter>
+  <filter-name>firstOne</filter-name>
+  <filter-class>college_servlet_jsp_program.ClassFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>firstOne</filter-name>
+  <url-pattern>/login</url-pattern>
+  </filter-mapping>
+  
+  <!-- this is for filter pack  -->
+  <filter>
+  <filter-name>secondOne</filter-name>
+  <filter-class>filter_pack.Myfliter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>secondOne</filter-name>
+  <url-pattern>/profileServlet</url-pattern>
+  <url-pattern>/orderServlet</url-pattern>
+  </filter-mapping>
+  
+</web-app>
+
+
+
+
+
+
+
+
+<!--  <?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>college_servlet_jsp_program</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+</web-app>  -->

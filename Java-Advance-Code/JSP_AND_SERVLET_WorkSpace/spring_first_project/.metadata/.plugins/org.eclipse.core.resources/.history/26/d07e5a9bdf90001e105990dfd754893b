@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module normal_spring {
+	requires org.springframework.context;
+}

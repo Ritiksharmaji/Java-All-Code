@@ -1,0 +1,27 @@
+@charset "UTF-8";
+body
+{
+ font-family:Veranda,Arial,Sans-serif;
+font-size: smaller;
+padding:50px;
+color:#555;
+}
+h1{
+text-align: left;
+letter-spacing: 6px;
+font-size: 1.4em;
+color:#be7429;
+font-weight:normal;
+widht:450px;
+}
+table{ widht:580px;
+padding:10px;
+background-color: #c4e7e0;
+}
+th{
+text-align: left;
+border-bottom: 1px solid;
+}
+td{
+padding: 10px;
+}

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  
+<welcome-file-list>
+<welcome-file>home.html</welcome-file>
+</welcome-file-list>
+
+  <!-- servlet declaration -->
+  
+  <!--  creating servlet pack  -->
+  
+  <servlet>
+  <servlet-name>life</servlet-name>
+  <servlet-class>creating_servlet.by_implement_sevlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>life</servlet-name>
+  <url-pattern>/lifeweb</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>generic</servlet-name>
+  <servlet-class>creating_servlet.by_extending_GenericClass</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>generic</servlet-name>
+  <url-pattern>/jio</url-pattern>
+  </servlet-mapping>
+  
+    <!--                first  package servlet declaring                         -->
+  <!-- for first servlet declaration -->
+  <servlet>
+  <servlet-name>first </servlet-name>
+  <servlet-class>first_pack.First_servlet</servlet-class>
+  </servlet>
+  
+  <!--  for second servlet -->
+   <servlet>
+  <servlet-name>second </servlet-name>
+  <servlet-class>first_pack.Second_servlet</servlet-class>
+  </servlet>
+  
+  <!--  for the third servlet class -->
+  <servlet>
+  <servlet-name>third </servlet-name>
+  <servlet-class>first_pack.Third_servlet</servlet-class>
+  </servlet>
+  
+  <!--  for the forth servlet class declaration -->
+  <servlet>
+  <servlet-name>register </servlet-name>
+  <servlet-class>first_pack.RegisterServlet</servlet-class>
+  </servlet>
+  
+  <!--  for five servlet declaration -->
+   <servlet>
+  <servlet-name>five</servlet-name>
+  <servlet-class>first_pack.Display_data</servlet-class>
+  </servlet>
+  
+  <!--  for six servlet declaration -->
+   <servlet>
+  <servlet-name>six</servlet-name>
+  <servlet-class>first_pack.RegisterServlet2</servlet-class>
+  </servlet>
+  
+  <!--  for six servlet declaration -->
+   <servlet>
+  <servlet-name>seven</servlet-name>
+  <servlet-class>first_pack.SuccessServlet</servlet-class>
+  </servlet>
+  
+  
+    <!--                second package servlet declaring                         -->
+  
+  <!--  for one servlet declaration -->
+   <servlet>
+  <servlet-name>sOne</servlet-name>
+  <servlet-class>Second_pack.Servlet_attributeOne</servlet-class>
+  </servlet>
+  
+  <!--  for second servlet declaration -->
+   <servlet>
+  <servlet-name>sTwo</servlet-name>
+  <servlet-class>Second_pack.Servlet_attributeTwo</servlet-class>
+  </servlet>
+  
+
+  
+  <!--                first package servlet mapping                         -->
+  
+  <!-- mapping for first servlet  -->
+  <servlet-mapping>
+  <servlet-name>first</servlet-name>
+  <url-pattern>/web</url-pattern>
+  </servlet-mapping>
+  
+  <!-- mapping for second servlet -->
+  
+  <servlet-mapping>
+  <servlet-name>second</servlet-name>
+  <url-pattern>/second_web</url-pattern>
+  </servlet-mapping>
+  
+  <!-- mapping for third servlet -->
+  <servlet-mapping>
+  <servlet-name>third</servlet-name>
+  <url-pattern>/third_web</url-pattern>
+  </servlet-mapping>
+  
+  <!-- mapping for four servlet -->
+  <servlet-mapping>
+  <servlet-name>register</servlet-name>
+  <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- mapping for five servlet  -->
+  <servlet-mapping>
+  <servlet-name>five</servlet-name>
+  <url-pattern>/five_web</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- mapping for five servlet  -->
+  <servlet-mapping>
+  <servlet-name>six</servlet-name>
+  <url-pattern>/RegisterServlet2</url-pattern>
+  </servlet-mapping>
+  
+  <!-- mapping for five servlet  -->
+  <servlet-mapping>
+  <servlet-name>seven</servlet-name>
+  <url-pattern>/Success</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+    <!--                second package servlet mapping                         -->
+  
+  <!-- mapping for first servlet  -->
+  <servlet-mapping>
+  <servlet-name>sOne</servlet-name>
+  <url-pattern>/Servlet_attributeOne</url-pattern>
+  </servlet-mapping>
+  
+  <!-- mapping for second servlet  -->
+  <servlet-mapping>
+  <servlet-name>sTwo</servlet-name>
+  <url-pattern>/Servlet_attributeTwo</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!--               third package servlet declaration                         -->
+  
+  <!--  for first servlet declaration -->
+   <servlet>
+  <servlet-name>thirdone</servlet-name>
+  <servlet-class>third_pack.login_auto</servlet-class>
+  </servlet>
+  
+  
+  
+  
+  <!--                third package servlet mapping                         -->
+  
+  
+  <!-- mapping for second servlet  -->
+  <servlet-mapping>
+  <servlet-name>thirdone</servlet-name>
+  <url-pattern>/thirdone</url-pattern>
+  </servlet-mapping>
+  
+</web-app> 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ <!--   <?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Servlet_second_project</display-name> 
+  -->
+  

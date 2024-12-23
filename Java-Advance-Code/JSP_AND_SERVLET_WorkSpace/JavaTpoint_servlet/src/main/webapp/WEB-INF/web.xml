@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>JavaTpoint_servlet</display-name>
+  <!-- <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>   -->
+  
+  
+ <!-- cookies packages  --> 
+ 
+ <servlet>  
+<servlet-name>s01</servlet-name>  
+<servlet-class>cookies.FirstServlet_cookies</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s01</servlet-name>  
+<url-pattern>/servlet</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s02</servlet-name>  
+<servlet-class>cookies.SecondServlet_cookies</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s02</servlet-name>  
+<url-pattern>/servlett</url-pattern>  
+</servlet-mapping> 
+  
+
+  
+  <!-- javaLogin packages -->
+
+   <servlet>  
+    <description></description>  
+    <display-name>LoginServlet</display-name>  
+    <servlet-name>LoginServlet</servlet-name>  
+    <servlet-class>javaLogin.LoginServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LoginServlet</servlet-name>  
+    <url-pattern>/LoginServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet>  
+    <description></description>  
+    <display-name>ProfileServlet</display-name>  
+    <servlet-name>ProfileServlet</servlet-name>  
+    <servlet-class>javaLogin.ProfileServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>ProfileServlet</servlet-name>  
+    <url-pattern>/ProfileServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet>  
+    <description></description>  
+    <display-name>LogoutServlet</display-name>  
+    <servlet-name>LogoutServlet</servlet-name>  
+    <servlet-class>javaLogin.LogoutServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LogoutServlet</servlet-name>  
+    <url-pattern>/LogoutServlet</url-pattern>  
+  </servlet-mapping>  
+  
+  <!-- this is for extra package -->
+  <servlet>  
+<servlet-name>s1</servlet-name>  
+<servlet-class>extra.FirstServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s1</servlet-name>  
+<url-pattern>/servlet1</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s2</servlet-name>  
+<servlet-class>extra.SecondServlet</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s2</servlet-name>  
+<url-pattern>/servlet2</url-pattern>  
+</servlet-mapping>
+  
+  <servlet>  
+<servlet-name>s3</servlet-name>  
+<servlet-class>extra.FirstServlet_hidden</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s3</servlet-name>  
+<url-pattern>/servlet3</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s4</servlet-name>  
+<servlet-class>extra.SecondServlet_hidden</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s4</servlet-name>  
+<url-pattern>/servlet4</url-pattern>  
+</servlet-mapping>
+ 
+ 
+ <!-- this is for session_login packages -->
+ 
+  
+  <servlet>  
+<servlet-name>s5</servlet-name>  
+<servlet-class>session_Login.FirstServlet_session</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s5</servlet-name>  
+<url-pattern>/servlet5</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s6</servlet-name>  
+<servlet-class>session_Login.SecondServlet_session</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s6</servlet-name>  
+<url-pattern>/servlet6</url-pattern>  
+</servlet-mapping>
+ 
+ 
+ <servlet>  
+<servlet-name>s7</servlet-name>  
+<servlet-class>session_Login.LoginServlet_session_Login</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s7</servlet-name>  
+<url-pattern>/LoginServlet_session</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s8</servlet-name>  
+<servlet-class>session_Login.LogoutServlet_session_Login</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s8</servlet-name>  
+<url-pattern>/LogoutServlet_session</url-pattern>  
+</servlet-mapping>
+ 
+  <servlet>  
+<servlet-name>s9</servlet-name>  
+<servlet-class>session_Login.ProfileServlet_session_Login</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s9</servlet-name>  
+<url-pattern>/ProfileServlet_session</url-pattern>  
+</servlet-mapping>
+ 
+ 
+ <!-- servlet_first -->
+ <servlet>
+ <servlet-name>life_cycle</servlet-name>
+ <servlet-class>Servlet_first.Lifecycle_methods</servlet-class>
+ </servlet>
+  <servlet-mapping>
+  <servlet-name>life_cycle</servlet-name>
+  <url-pattern>/by_implement_servlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+ <!-- this is for the filter pack  --> 
+  
+  <servlet>  
+        <servlet-name>s10</servlet-name>  
+        <servlet-class>filter.AdminServlet</servlet-class>  
+   </servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s10</servlet-name>  
+<url-pattern>/servlet1_filter</url-pattern>  
+</servlet-mapping>  
+  
+<filter>  
+<filter-name>f2</filter-name>  
+<filter-class>filter.MyFilterr</filter-class>  
+</filter>  
+   
+<filter-mapping>  
+<filter-name>f2</filter-name>  
+<url-pattern>/servlet1_filter</url-pattern>  
+</filter-mapping>  
+  
+  
+  
+  
+  
+  
+</web-app>

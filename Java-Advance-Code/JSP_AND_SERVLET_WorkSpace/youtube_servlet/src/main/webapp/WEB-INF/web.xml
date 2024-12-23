@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+
+  <display-name>welcome to my web app</display-name>
+  <context-param>
+	  <param-name>mysql_driver</param-name>
+	  <param-value>mysql.come.here</param-value>
+  </context-param>
+  <context-param>
+	  <param-name>url</param-name>
+	  <param-value>http.servlet.hotstar.com</param-value>
+  </context-param>
+  <context-param>
+	  <param-name>driver_class</param-name>
+	  <param-value>go beta go</param-value>
+  </context-param>
+  
+  <!-- to access this object name we are using servlet -->
+  
+  <servlet>
+	  <servlet-name>ContextServlet</servlet-name>
+	  <servlet-class>durga_sir.contextservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>ContextServlet</servlet-name>
+	  <url-pattern>/context</url-pattern>
+  </servlet-mapping>
+  
+    <welcome-file-list>
+    <welcome-file>tracking.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>  
+  </welcome-file-list>        
+  
+  
+  <servlet>  
+<servlet-name>s1</servlet-name>  
+<servlet-class>Tracking.servlet1</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s1</servlet-name>  
+<url-pattern>/servlet1</url-pattern>  
+</servlet-mapping>  
+  
+<servlet>  
+<servlet-name>s2</servlet-name>  
+<servlet-class>Tracking.servlet2</servlet-class>  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>s2</servlet-name>  
+<url-pattern>/servlet2</url-pattern>  
+</servlet-mapping>  
+
+  <!-- this is for servletconfig_and_servletcontext  pack    -->
+<servlet>
+	<servlet-name>configServlet</servlet-name>
+	<servlet-class>servletconfig_and_servletcontext.Configservlet_class</servlet-class>
+	
+	<init-param>
+		<param-name>driverClass</param-name>
+		<param-value>oracle.jdbc.OracleDriver</param-value>
+	</init-param>
+	
+	<init-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:oracle:thin:@localhost:8080:xe</param-value>
+	</init-param>
+	
+	<init-param>
+		<param-name>username</param-name>
+		<param-value>system</param-value>
+	</init-param>
+	
+	<init-param>
+		<param-name>password</param-name>
+		<param-value>ritikji</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+	
+	<servlet-name>configServlet</servlet-name>
+	<url-pattern>/config</url-pattern>
+	
+</servlet-mapping>
+  <!-- this is for filter pack    -->
+  
+  <servlet>
+	  <servlet-name>profile</servlet-name>
+	  <servlet-class>filter.profile</servlet-class>
+  </servlet>
+  
+  <servlet>
+	  <servlet-name>order</servlet-name>
+	  <servlet-class>filter.order</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	  <servlet-name>order</servlet-name>
+	  <url-pattern>/order_servlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+	  <servlet-name>profile</servlet-name>
+	  <url-pattern>/profile_servlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <filter>
+	  <filter-name>filter</filter-name>
+	  <filter-class>filter.First_filterClass</filter-class>
+  </filter>
+  <filter-mapping>
+	  <filter-name>filter</filter-name>
+	  <url-pattern>/profile_servlet</url-pattern>
+  </filter-mapping>
+</web-app>

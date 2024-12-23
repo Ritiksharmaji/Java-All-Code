@@ -1,0 +1,18 @@
+package unit_2_package;
+
+
+public class Recurser_example_program {
+	 
+		static int count=0;  
+		static void p(){  
+		count++;  
+		if(count<=5){  
+		System.out.println("hello "+count);  
+		p();  
+		}  
+		}  
+		public static void main(String[] args) {  
+		p();  
+		}  
+
+}
