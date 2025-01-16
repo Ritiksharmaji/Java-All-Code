@@ -9,9 +9,9 @@ public class ArrayListExample1 {
 		// TODO Auto-generated method stub
 		ArrayList<String> list=new ArrayList<String>(); //Creating arraylist   
 		
-		list.add("ritik skarma");
-		list.add("golu");
-		 list.add("Mango");//Adding object in arraylist    
+		  list.add("ritik skarma");
+		  list.add("golu");
+		  list.add("Mango");//Adding object in arraylist    
 	      list.add("Apple");    
 	      list.add("Banana");    
 	      list.add("Grapes");

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/commons-fileupload-1.4-sources.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/commons-fileupload-1.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/commons-io-1.4-sources.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/json-20230618.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/all jars/all jar files/commons-logging-1.2/commons-logging-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RITIK SHARMA/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar" sourcepath="C:/Users/RITIK SHARMA/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="javax.servlet"/>
+			<attribute name="maven.artifactId" value="javax.servlet-api"/>
+			<attribute name="maven.version" value="4.0.1"/>
+			<attribute name="maven.scope" value="provided"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/tomcat-coyote.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://tomcat.apache.org/tomcat-9.0-doc/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
