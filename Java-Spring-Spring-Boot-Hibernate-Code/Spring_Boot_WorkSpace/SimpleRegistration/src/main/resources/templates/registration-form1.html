@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Step Registration Form</title>
+    <style>
+        /* Reset and global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input, select, button {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        input:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+        <form id="multiStepForm" action="/api/v9/register" method="POST" enctype="multipart/form-data">
+            <!-- Step 1 -->
+            <div class="step active" id="step1">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" min="1" required>
+                </div>
+
+                <div>
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="course">Course</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Select your course</option>
+                        <option value="B.Sc">B.Sc</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="M.Sc">M.Sc</option>
+                        <option value="MBA">MBA</option>
+                        <option value="Ph.D">Ph.D</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step" id="step2">
+                <div>
+                    <label for="tenth_marks">10th Marks (%)</label>
+                    <input type="number" id="tenth_marks" name="tenthMarks" placeholder="Enter 10th marks" min="0" max="100" required>
+                </div>
+
+                <div>
+                    <label for="inter_marks">12th Marks (%)</label>
+                    <input type="number" id="inter_marks" name="interMarks" placeholder="Enter 12th marks" min="0" max="100" required>
+                </div>
+
+                <div>
+                    <label for="bachelor_marks">Bachelor's Marks (%)</label>
+                    <input type="number" id="bachelor_marks" name="bachelorMarks" placeholder="Enter bachelor's marks" min="0" max="100" required>
+                </div>
+
+                <div>
+                    <label for="master_marks">Master's Marks (%)</label>
+                    <input type="number" id="master_marks" name="masterMarks" placeholder="Enter master's marks" min="0" max="100">
+                </div>
+
+                <div>
+                    <label for="photoFile">Upload Photo</label>
+                    <input type="file" id="photoFile" name="photoFile" accept="image/*" required>
+                </div>
+
+                <div>
+                    <label for="sigFile">Upload Signature</label>
+                    <input type="file" id="sigFile" name="sigFile" accept="image/*" required>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-row">
+                <button type="button" id="prevBtn" style="display: none;">Previous</button>
+                <button type="button" id="nextBtn">Next</button>
+                <button type="submit" id="submitBtn" style="display: none;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Multi-step form functionality
+        const steps = document.querySelectorAll('.step');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        let currentStep = 0;
+
+        function updateStep() {
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', index === currentStep);
+            });
+
+            prevBtn.style.display = currentStep > 0 ? 'inline-block' : 'none';
+            nextBtn.style.display = currentStep < steps.length - 1 ? 'inline-block' : 'none';
+            submitBtn.style.display = currentStep === steps.length - 1 ? 'inline-block' : 'none';
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentStep++;
+            updateStep();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentStep--;
+            updateStep();
+        });
+
+        document.getElementById('multiStepForm').addEventListener('submit', (e) => {
+            alert('Form submitted successfully!');
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

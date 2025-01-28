@@ -29,6 +29,7 @@ public class Registration {
 
     public Registration(String name, int age, String gender, String course, float tenthMarks, float interMarks,
                         float bachelorMarks, float masterMarks, String photo, String sig) {
+    	System.out.println("-----------------Registration constructor execute------------------------");
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -49,12 +50,16 @@ public class Registration {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+   
 
     public void setName(String name) {
+    	System.out.println("-----------------setter execute for name------------------------");
         this.name = name;
+    }
+    
+    public String getName() {
+    	System.out.println("-----------------getter execute for name------------------------");
+        return name;
     }
 
     public int getAge() {
