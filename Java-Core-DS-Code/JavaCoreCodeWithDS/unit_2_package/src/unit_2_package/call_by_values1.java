@@ -15,9 +15,7 @@ class Operation
 
 
 public class call_by_values1 {
-	
-
-	public static void main(String[] args) {
+		public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 
 	       Operation op=new Operation();  

@@ -14,7 +14,7 @@ public class _1_JaggedArray {
 		        // elements and so on
 		        for (int i = 0; i < arr.length; i++)
 		            arr[i] = new int[i + 1];
-
+		        	
 		        // Initializing array
 		        int count = 0;
 		        for (int i = 0; i < arr.length; i++)
