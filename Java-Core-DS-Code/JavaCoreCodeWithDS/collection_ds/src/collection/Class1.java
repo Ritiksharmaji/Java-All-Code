@@ -13,10 +13,6 @@ public class Class1 {
 		// to get the element 
 		String s=list.get(1);
 		System.out.println("fisrt index elemnt :"+s);
-		
-		//
-		
-
 	}
 
 }

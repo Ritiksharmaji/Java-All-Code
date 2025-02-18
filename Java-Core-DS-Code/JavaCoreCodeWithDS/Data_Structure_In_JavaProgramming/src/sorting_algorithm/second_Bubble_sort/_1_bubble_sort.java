@@ -1,8 +1,7 @@
 package sorting_algorithm.second_Bubble_sort;
 
 public class _1_bubble_sort {
-	
-	
+
 	static void bubbleSort(int arr[], int length) {
 		int temp;
 		boolean swapped = false;

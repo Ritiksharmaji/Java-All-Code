@@ -18,9 +18,10 @@ public class _1_Selection_Sort {
             }
 
             // Move minimum element to its correct position by using swap 
-            int temp = arr[i];
-            arr[i] = arr[min_idx];
-            arr[min_idx] = temp;           
+            int temp = arr[i];         // Step 1: Store the value of arr[i] in a temporary variable
+            arr[i] = arr[min_idx];     // Step 2: Assign the value of arr[min_idx] to arr[i]
+            arr[min_idx] = temp;       // Step 3: Assign the value stored in 'temp' to arr[min_idx]
+      
         }
     }
 	
